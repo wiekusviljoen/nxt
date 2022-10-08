@@ -91,12 +91,7 @@ export const getServerSideProps = async (pageContext) => {
   }
 
   const apiResponse = await fetch(
-    `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=9567594f840f46a3a1c32cd81bd706e1`,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NEWS_KEY}`,
-      },
-    }
+    `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=9567594f840f46a3a1c32cd81bd706e1`
   ).then((res) => res.json());
 
   const { articles } = apiResponse;
